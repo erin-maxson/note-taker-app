@@ -4,11 +4,12 @@ const {addNewNote} = require("../lib/note_info")
 const db=require("../db/db.json");
 
 router.get("/api/notes", (req, res)=>{
-     res.json("db");
+     res.json(db);
 });
 
 router.post("/api/notes", (req, res)=>{
     console.log(req.body);
+    req.body.id = fs();
     const addNote = addNewNote(req.body, notes);
     res.json(addNote);
 });
@@ -19,4 +20,4 @@ router.post("/api/notes", (req, res)=>{
 //     res.redirect('');
 // });
 
-module.exports=router;
+module.exports=router
