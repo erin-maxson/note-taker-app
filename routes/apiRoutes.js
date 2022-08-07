@@ -1,16 +1,17 @@
-const router=require("express").Router()
-const fs=require("fs")
-const db=require("../db/db.json")
+const router=require("express").Router();
+const fs=require("fs");
+const {addNewNote, dbUpdate} = require("../lib/note_info")
+const db=require("../db/db.json");
 
 router.get("/api/notes",(req,res)=>{
-     res.json(db)
+     res.json(db);
 })
 
 
 router.post("/api/notes", (req, res)=>{
-    console.log(req.body)
+    console.log(req.body);
     const addNote = addNewNote(req.body, notes);
-    res.json(addNote)
+    res.json(addNote);
 });
 
     //db is array, think about array function to add new element or value of an array
@@ -18,7 +19,8 @@ router.post("/api/notes", (req, res)=>{
 
 router.delete("/api/notes", (req, res)=>{
     const params = req.params.id
-    dbUpdate
-})
+    dbUpdate(params, notes);
+    res.redirect('');
+});
 
 module.exports=router
