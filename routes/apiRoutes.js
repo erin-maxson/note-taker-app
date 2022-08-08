@@ -1,7 +1,7 @@
 const router=require("express").Router();
 const fs=require("fs");
-const {addNewNote} = require("../lib/note_info")
 const db=require("../db/db.json");
+
 
 router.get("/api/notes", (req, res)=>{
      res.json(db);
@@ -9,15 +9,18 @@ router.get("/api/notes", (req, res)=>{
 
 router.post("/api/notes", (req, res)=>{
     console.log(req.body);
-    req.body.id = fs();
-    const addNote = addNewNote(req.body, notes);
-    res.json(addNote);
-});
+    const {title, text} = req.body;
+    const createNote = {
+        title,
+        text
+    }
 
-// router.delete("/api/notes", (req, res)=>{
-//     const params = req.params.id
-//     dbUpdate(params, notes);
-//     res.redirect('');
-// });
+    db.push(createNote)
+    const noteText = JSON.stringify(db,null,2)
+
+    fs.writeFile(".db/db.json",noteText)
+
+    res.json(db)
+});
 
 module.exports=router
