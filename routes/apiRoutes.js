@@ -5,6 +5,7 @@ const noteID=require("../public/assets/js/noteid");
 
 
 router.get("/api/notes", (req, res)=>{
+    console.log(typeof db);
      res.json(db);
 });
 
