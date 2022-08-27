@@ -5,24 +5,16 @@ This project should be used as a note taking app. The user can create multiple n
 
 ## Installation
 
-To install this project, select the index.html file and open it in your default browser or with a live server. Once you're in the application, you can type in your city to have the current weather shown and the upcoming 5 day weather forecast based on the current time.
+To install this application, download all files from github. Open an integrated terminal and download node.js using npm i. Once you've done that, you can run npm start to open a local server to add and save notes.
 
 ## Usage
-
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
-
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
+When you first open the application through index.html, you'll be brought into the note taker homepage. Click through from the homepage to add your note information and save it for a later date.
+    ![Note Taker Homepage](./public/assets/images/note%20home.png)
+    ![Add a note page](./public/assets/images/add%20a%20note.png)
+   
 
 ## Credits
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+Thank you to my tutor for helping me debug this project!
 
 ## License
 
@@ -53,7 +45,7 @@ SOFTWARE.
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
-If your project has a lot of features, list them here.
+The features inside of this application include adding and saving notes on local storage.
 
 ## How to Contribute
 
