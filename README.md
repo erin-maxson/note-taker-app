@@ -12,6 +12,7 @@ When you first open the application through index.html, you'll be brought into t
     ![Note Taker Homepage](./public/assets/images/note%20home.png)
     ![Add a note page](./public/assets/images/add%20a%20note.png)
    
+Link on how to use this application in a video demo is here: ![Video demo](https://www.loom.com/share/fb3b3aa8ab9e45d2ab3199f2be671d86)
 
 ## Credits
 Thank you to my tutor for helping me debug this project!
